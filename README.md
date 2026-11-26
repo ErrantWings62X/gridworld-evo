@@ -48,9 +48,18 @@ Seed 17, Python 3.12.13, PyTorch 2.15.0, two CPU worker processes. The run train
 | Untrained initialization of the selected lineage | 19 / 192 | 0 / 64 |
 | Selected trained policy | 143 / 192 | 37 / 64 |
 
-These scores measure the combined pipeline in one seeded experiment. Isolating the contribution of mutation would require a matched backprop-only baseline. The example report is from a CPU run. Training on two physical CUDA GPUs remains unverified for this demo.
+These scores measure the combined pipeline in one seeded experiment. Isolating the contribution of mutation would require a matched backprop-only baseline.
 
 See [the full run report](example-results.json) for the settings, per-candidate results, device assignments, and validation recheck.
+
+## Two-GPU RunPod result
+
+On 2026-11-26, two NVIDIA A100 SXM4 80 GB GPUs trained the default seed-17 run on RunPod. The run used Python 3.12.3 and PyTorch 2.13.0+cu129. Each GPU trained six of the 12 candidates, and candidate jobs overlapped across the two devices.
+
+On 64 held-out test maps, the selected policy collected **139 / 192 pellets** and cleared **38 / 64 maps**. Its untrained initialization collected **19 pellets** and cleared **0 maps**. Both test evaluations ran on CPU. The selected checkpoint also scored 106 / 144 pellets and cleared 29 / 48 validation maps on both its CUDA worker and the CPU recheck.
+
+The [RunPod report](runpod-two-gpu-results.json) includes job times, device assignments, and scores. The run used [source commit `ebbc03f`](https://github.com/ErrantWings62X/gridworld-evo/commit/ebbc03fe1f73c568b603ca58a0beeb92055a0db4).
+
 
 ```sh
 python -m unittest discover -s tests -v

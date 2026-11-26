@@ -1,0 +1,324 @@
+{
+  "settings": {
+    "seed": 17,
+    "population": 4,
+    "generations": 3,
+    "train_steps_per_candidate": 140,
+    "train_worlds": 96,
+    "validation_worlds": 48,
+    "test_worlds": 64,
+    "devices": [
+      "cuda:0",
+      "cuda:1"
+    ],
+    "torch_version": "2.13.0+cu129",
+    "python_version": "3.12.3",
+    "grid_size": 5,
+    "food_per_board": 3,
+    "rollout_step_limit": 32,
+    "parameters": 17476,
+    "width": 32,
+    "heads": 4,
+    "layers": 2,
+    "feedforward": 64,
+    "learning_rate": 0.002,
+    "batch_size": 64,
+    "mutation_std": 0.015
+  },
+  "peak_parallel_jobs": 2,
+  "generations": [
+    {
+      "generation": 0,
+      "batch_seed": 3820025369359072449,
+      "winner": "g000-002",
+      "results": [
+        {
+          "candidate": {
+            "name": "g000-000",
+            "founder_seed": 2798587787161586016,
+            "parent": null,
+            "mutation_seed": null
+          },
+          "device": "cuda:1",
+          "worker_pid": 274,
+          "started_seconds": 2.649818,
+          "finished_seconds": 4.85213,
+          "mean_training_loss": 0.7866341727120536,
+          "validation": {
+            "food_collected": 97,
+            "food_available": 144,
+            "worlds_cleared": 25,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g000-001",
+            "founder_seed": 3372281378596125783,
+            "parent": null,
+            "mutation_seed": null
+          },
+          "device": "cuda:0",
+          "worker_pid": 277,
+          "started_seconds": 2.66985,
+          "finished_seconds": 5.039362,
+          "mean_training_loss": 0.8224619729178292,
+          "validation": {
+            "food_collected": 97,
+            "food_available": 144,
+            "worlds_cleared": 25,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g000-002",
+            "founder_seed": 1611215127882032026,
+            "parent": null,
+            "mutation_seed": null
+          },
+          "device": "cuda:1",
+          "worker_pid": 274,
+          "started_seconds": 4.852488,
+          "finished_seconds": 5.526525,
+          "mean_training_loss": 0.8216309138706752,
+          "validation": {
+            "food_collected": 104,
+            "food_available": 144,
+            "worlds_cleared": 27,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g000-003",
+            "founder_seed": 6503791988039458301,
+            "parent": null,
+            "mutation_seed": null
+          },
+          "device": "cuda:0",
+          "worker_pid": 277,
+          "started_seconds": 5.039784,
+          "finished_seconds": 5.716358,
+          "mean_training_loss": 0.7927398136683873,
+          "validation": {
+            "food_collected": 99,
+            "food_available": 144,
+            "worlds_cleared": 25,
+            "worlds": 48
+          },
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "generation": 1,
+      "batch_seed": 4982330802764759246,
+      "winner": "g001-003",
+      "results": [
+        {
+          "candidate": {
+            "name": "g001-000",
+            "founder_seed": 1611215127882032026,
+            "parent": "g000-002",
+            "mutation_seed": null
+          },
+          "device": "cuda:1",
+          "worker_pid": 274,
+          "started_seconds": 5.71765,
+          "finished_seconds": 6.353409,
+          "mean_training_loss": 0.5781542096819197,
+          "validation": {
+            "food_collected": 101,
+            "food_available": 144,
+            "worlds_cleared": 27,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g001-001",
+            "founder_seed": 1611215127882032026,
+            "parent": "g000-002",
+            "mutation_seed": 2566647810112906861
+          },
+          "device": "cuda:0",
+          "worker_pid": 277,
+          "started_seconds": 5.717622,
+          "finished_seconds": 6.381413,
+          "mean_training_loss": 0.5788731166294643,
+          "validation": {
+            "food_collected": 100,
+            "food_available": 144,
+            "worlds_cleared": 26,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g001-002",
+            "founder_seed": 1611215127882032026,
+            "parent": "g000-002",
+            "mutation_seed": 8462379561340081252
+          },
+          "device": "cuda:1",
+          "worker_pid": 274,
+          "started_seconds": 6.353663,
+          "finished_seconds": 6.984006,
+          "mean_training_loss": 0.5719111851283483,
+          "validation": {
+            "food_collected": 78,
+            "food_available": 144,
+            "worlds_cleared": 8,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g001-003",
+            "founder_seed": 1611215127882032026,
+            "parent": "g000-002",
+            "mutation_seed": 2295725934690784294
+          },
+          "device": "cuda:0",
+          "worker_pid": 277,
+          "started_seconds": 6.381701,
+          "finished_seconds": 7.027925,
+          "mean_training_loss": 0.580185045514788,
+          "validation": {
+            "food_collected": 106,
+            "food_available": 144,
+            "worlds_cleared": 29,
+            "worlds": 48
+          },
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "batch_seed": 7518764553117174162,
+      "winner": "g002-000",
+      "results": [
+        {
+          "candidate": {
+            "name": "g002-000",
+            "founder_seed": 1611215127882032026,
+            "parent": "g001-003",
+            "mutation_seed": null
+          },
+          "device": "cuda:1",
+          "worker_pid": 274,
+          "started_seconds": 7.029104,
+          "finished_seconds": 7.661706,
+          "mean_training_loss": 0.5317731039864676,
+          "validation": {
+            "food_collected": 105,
+            "food_available": 144,
+            "worlds_cleared": 27,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g002-001",
+            "founder_seed": 1611215127882032026,
+            "parent": "g001-003",
+            "mutation_seed": 3869817244013019505
+          },
+          "device": "cuda:0",
+          "worker_pid": 277,
+          "started_seconds": 7.02908,
+          "finished_seconds": 7.67836,
+          "mean_training_loss": 0.5305678231375558,
+          "validation": {
+            "food_collected": 105,
+            "food_available": 144,
+            "worlds_cleared": 27,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g002-002",
+            "founder_seed": 1611215127882032026,
+            "parent": "g001-003",
+            "mutation_seed": 7929377921563375858
+          },
+          "device": "cuda:1",
+          "worker_pid": 274,
+          "started_seconds": 7.661959,
+          "finished_seconds": 8.296167,
+          "mean_training_loss": 0.5216352190290179,
+          "validation": {
+            "food_collected": 104,
+            "food_available": 144,
+            "worlds_cleared": 27,
+            "worlds": 48
+          },
+          "attempts": 1
+        },
+        {
+          "candidate": {
+            "name": "g002-003",
+            "founder_seed": 1611215127882032026,
+            "parent": "g001-003",
+            "mutation_seed": 7400593613713377351
+          },
+          "device": "cuda:0",
+          "worker_pid": 277,
+          "started_seconds": 7.678615,
+          "finished_seconds": 8.327226,
+          "mean_training_loss": 0.5314918518066406,
+          "validation": {
+            "food_collected": 105,
+            "food_available": 144,
+            "worlds_cleared": 27,
+            "worlds": 48
+          },
+          "attempts": 1
+        }
+      ]
+    }
+  ],
+  "selected_candidate": "g001-003",
+  "validation_recheck": {
+    "worker_device": "cuda:0",
+    "worker": {
+      "food_collected": 106,
+      "food_available": 144,
+      "worlds_cleared": 29,
+      "worlds": 48
+    },
+    "cpu": {
+      "food_collected": 106,
+      "food_available": 144,
+      "worlds_cleared": 29,
+      "worlds": 48
+    },
+    "same_scores": true
+  },
+  "test": {
+    "device": "cpu",
+    "untrained_founder": {
+      "food_collected": 19,
+      "food_available": 192,
+      "worlds_cleared": 0,
+      "worlds": 64
+    },
+    "selected_policy": {
+      "food_collected": 139,
+      "food_available": 192,
+      "worlds_cleared": 38,
+      "worlds": 64
+    }
+  }
+}
